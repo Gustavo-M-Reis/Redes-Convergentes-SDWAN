@@ -1,0 +1,29 @@
+{
+  "time": 1791753977.261791,
+  "tolerancePct": 5,
+  "ok": true,
+  "paths": [
+    {
+      "path": "premium",
+      "expectedRttMs": 40,
+      "rttMs": 41.12068965517241,
+      "rttErrorPct": 2.801724137931032,
+      "expectedRateMbit": 100,
+      "linkRateMbit": 99.99633600041547,
+      "rateErrorPct": -0.0036639995845320072,
+      "tcpGoodputMbit": 92.33044661558155,
+      "ok": true
+    },
+    {
+      "path": "backup",
+      "expectedRttMs": 80,
+      "rttMs": 81.22758620689655,
+      "rttErrorPct": 1.5344827586206833,
+      "expectedRateMbit": 10,
+      "linkRateMbit": 10.002586000925628,
+      "rateErrorPct": 0.0258600092562844,
+      "tcpGoodputMbit": 9.069700773219976,
+      "ok": true
+    }
+  ]
+}

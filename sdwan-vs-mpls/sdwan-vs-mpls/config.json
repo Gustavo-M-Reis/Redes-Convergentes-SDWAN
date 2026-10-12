@@ -1,0 +1,31 @@
+{
+  "links": {
+    "premium": {"rateMbit": 100, "delayMs": 10},
+    "backup": {"rateMbit": 10, "delayMs": 20}
+  },
+  "queueLatencyMs": 50,
+  "tcpCongestion": "cubic",
+  "degradedLink": "r1r2",
+  "scenarios": {
+    "degrade": {"delayMs": 100, "jitterMs": 20, "lossPct": 5, "bothDirections": false},
+    "cut": {"delayMs": 10, "jitterMs": 0, "lossPct": 100, "bothDirections": true}
+  },
+  "policies": ["static", "sdwan"],
+  "loadsMbit": [5, 50],
+  "timeline": {"degradeAt": 10, "recoverAt": 30, "endAt": 55},
+  "quickTimeline": {"degradeAt": 6, "recoverAt": 16, "endAt": 38},
+  "sla": {"rttMs": 150, "lossPct": 1},
+  "agent": {
+    "probeIntervalS": 1.0,
+    "pingCount": 5,
+    "pingIntervalS": 0.2,
+    "pingTimeoutS": 0.5,
+    "windowProbes": 10,
+    "hysteresis": 0.2,
+    "failbackCount": 5,
+    "warmupS": 2.0
+  },
+  "measure": {"pingIntervalS": 0.1, "iperfIntervalS": 0.5, "iperfBlockBytes": 8192, "binS": 1.0},
+  "validation": {"tolerancePct": 5, "pingCount": 30, "iperfSeconds": 6},
+  "repetitions": 10
+}
